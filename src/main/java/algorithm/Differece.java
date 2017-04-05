@@ -11,8 +11,9 @@ import java.util.Arrays;
 public class Differece {
     int[] list;
 
-    public Differece(int[] list) {
-        this.list = list;
+    public Differece(int[] arr) {
+        this.list = new int[arr.length];
+        this.list = arr.clone();
         int temp = list[0],next;
         for(int i = 1 ; i < list.length ; i++){
             next = list[i] - list[i-1];
@@ -20,10 +21,14 @@ public class Differece {
             temp = next;
         }
         list[list.length-1] = temp;
-
     }
 
     public void update(int left,int right,int val){
+        if(left > right){
+            int t = right;
+            right = left;
+            left = t;
+        }
         list[left] += val;
         if(++right < list.length)
             list[right] -= val;
