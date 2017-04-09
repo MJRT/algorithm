@@ -1,6 +1,5 @@
 package algorithm;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
@@ -15,7 +14,7 @@ public class Matrix {
         this.row = row;
         this.col = col;
         this.MOD = MOD;
-        mat = new long[row][col];
+        mat = new long[row+1][col+1];
     }
 
     public Matrix multiply(Matrix r){
