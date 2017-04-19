@@ -2,17 +2,18 @@
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.*;
-import java.math.*;
+import static java.lang.Math.*;
 
 public class Main {
 
+
+
     void run(){
-        System.out.println(40000000000L);
-        System.out.println(Integer.MAX_VALUE);
-        System.out.println(Long.MAX_VALUE);
-        System.out.println(0x07);
-        BitSet bitSet;
+        Solution s = new Solution();
+        System.out.println(s.getMoneyAmount(2));
     }
+
+
 
     public static void main(String[] args) {
         new Main().run();
